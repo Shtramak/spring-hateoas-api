@@ -1,6 +1,5 @@
 package ua.procamp.hateoasapi.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.procamp.hateoasapi.dao.UserDao;
 import ua.procamp.hateoasapi.entity.User;
@@ -18,7 +17,6 @@ public class UserServiceImpl implements UserService {
     private final UserDao userDao;
     private final UserResourceAssembler resourceAssembler;
 
-    @Autowired
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
         resourceAssembler = new UserResourceAssembler();
